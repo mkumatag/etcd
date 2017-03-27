@@ -37,4 +37,4 @@ cp ${BINARYDIR}/etcd ${BINARYDIR}/etcdctl ${IMAGEDIR}
 
 cat ./${DOCKERFILE} > ${IMAGEDIR}/Dockerfile
 
-docker build -t ${TAG}:${1} ${IMAGEDIR}
+docker build -v /usr/bin/qemu-ppc64le-static:/usr/bin/qemu-ppc64le-static -t ${TAG}:${1} ${IMAGEDIR}
